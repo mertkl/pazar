@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giriş Yap</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Giriş Yap</h1>
+    <form id="loginForm">
+      <label for="username">Kullanıcı Adı:</label>
+      <input type="text" id="username" required>
+
+      <label for="password">Şifre:</label>
+      <input type="password" id="password" required>
+
+      <button type="submit">Giriş</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Basit örnek – gerçek sistemde backend kontrolü yapılır
+      if (username && password) {
+        localStorage.setItem("loggedInUser", username);
+        window.location.href = "profil.html"; // Giriş sonrası yönlendirme
+      } else {
+        alert("Lütfen geçerli bilgiler girin.");
+      }
+    });
+  </script>
+</body>
+</html>

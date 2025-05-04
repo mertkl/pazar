@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil Sayfası</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1; /* Hafif gri bir arka plan */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: #333; /* Koyu gri arka plan */
+      color: white;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header #username {
+      font-weight: bold;
+    }
+
+    main {
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+    
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.7); /* Şeffaf siyah arka plan */
+      color: white;
+      font-size: 18px;
+      border-radius: 5px;
+      display: block;
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    }
+
+    a:hover {
+      background-color: rgba(0, 0, 0, 0.9); /* Hoverda daha koyu siyah */
+      transform: scale(1.05);
+    }
+
+    a:active {
+      transform: scale(0.98);
+    }
+
+    /* Animasyon */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header h1 {
+      animation: fadeIn 1s ease-out;
+    }
+
+    li a {
+      animation: fadeIn 1.2s ease-out;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hoş Geldin, <span id="username"></span></h1>
+  </header>
+
+  <main>
+    <ul>
+      <li><a href="/">Ana Sayfa</a></li>
+      <li><a href="#">Hesap Bilgileri</a></li>
+      <li><a href="#">Şifre Değiştir</a></li>
+      <li><a href="#">Bakiye: ₺0</a></li>
+      <li><a href="#">Bakiye Yükle</a></li>
+    </ul>
+  </main>
+
+  <script>
+    const user = localStorage.getItem("loggedInUser");
+    if (user) {
+      document.getElementById("username").textContent = user;
+    } else {
+      window.location.href = "login.html"; // Giriş yapılmadıysa yönlendir
+    }
+  </script>
+</body>
+</html>

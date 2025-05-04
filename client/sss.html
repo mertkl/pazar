@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sıkça Sorulan Sorular - Oyuncu Pazarı</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .accordion-item {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    .accordion-question {
+      cursor: pointer;
+      padding: 12px;
+      background-color: #f2f2f242;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion-question:hover {
+      background-color: #f2f2f242;
+    }
+
+    .accordion-answer {
+      padding: 0 12px;
+      max-height: 0;
+      overflow: hidden;
+      background-color: #f2f2f242;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .accordion-answer.open {
+      padding: 12px;
+      max-height: 500px; /* Yeterli genişlik, fazla olursa scroll bar olur */
+    }
+
+    .accordion-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-icon.rotate {
+      transform: rotate(90deg);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OYUNCU PAZARI</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Ana Sayfa</a></li>
+        <li><a href="/signup">Üyelik</a></li>
+        <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Sıkça Sorulan Sorular</h2>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-question">
+          <span>1. Ürünler nasıl teslim ediliyor?</span>
+          <span class="accordion-icon">▶</span>
+        </div>
+        <div class="accordion-answer">
+          Ürünler oyun içindeki takas sistemi aracılığıyla teslim edilmektedir.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-question">
+          <span>2. Hangi ödeme yöntemlerini kabul ediyorsunuz?</span>
+          <span class="accordion-icon">▶</span>
+        </div>
+        <div class="accordion-answer">
+          Papara ve Bitcoin ile ödeme kabul edilmektedir.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-question">
+          <span>3. İade politikası nedir?</span>
+          <span class="accordion-icon">▶</span>
+        </div>
+        <div class="accordion-answer">
+          Dijital ürünlerde iade yapılamamaktadır. Ancak ürün teslimatında bir gecikme olursa canlı destek size yardımcı olacaktır.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-question">
+          <span>4. Ürünler ne kadar sürede teslim edilir?</span>
+          <span class="accordion-icon">▶</span>
+        </div>
+        <div class="accordion-answer">
+          Ürünler en geç 10 dakika içinde teslim edilir.
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <div class="accordion-question">
+          <span>5. Satın aldığım ürün hesabıma otomatik mi yükleniyor?</span>
+          <span class="accordion-icon">▶</span>
+        </div>
+        <div class="accordion-answer">
+          Hayır, ürünler manuel olarak oyun içinden teslim edilir. Sipariş sonrası sizinle iletişime geçilir.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-question">
+          <span>Neden size güvenelim?</span>
+          <span class="accordion-icon">▶</span>
+        </div>
+        <div class="accordion-answer">
+          Oyuncu pazarı yeni kurulmuş ve firmalaşmış bir şirkettir. 7/24 aktif canlı destek sistemimizle sizlere her vakit yardımcı olmaktayız. Sadece papara ve bitcoin gibi güvenli ödeme yöntemlerini kullanarak hiçbir kredi kartı bilginiz sistemimizden geçmemektedir.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Oyuncu Pazarı. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.accordion-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const icon = question.querySelector('.accordion-icon');
+
+        answer.classList.toggle('open');
+        icon.classList.toggle('rotate');
+      });
+    });
+  </script>
+</body>
+</html>

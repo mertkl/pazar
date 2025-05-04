@@ -1,0 +1,395 @@
+/* Temel stil ayarları */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white; /* Metin rengi beyaz olacak */
+  height: 100vh; /* Yüksekliği ekranın tamamını kaplayacak şekilde ayarlıyoruz */
+  background-image: url('background.jpg');
+  background-size: cover; /* Görselin tam ekranı kaplamasını sağlar */
+  background-position: center; /* Görseli ortalar */
+  background-repeat: no-repeat; /* Görselin tekrarlanmamasını sağlar */
+}
+
+/* Signup sayfası için özel stiller */
+body.signup-page {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.signup-page .container {
+  width: 350px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.signup-page h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.signup-page label {
+  display: block;
+  margin: 15px 0 5px;
+  text-align: left;
+  color: #555;
+}
+
+.signup-page input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.signup-page button {
+  width: 100%;
+  padding: 12px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.signup-page button:hover {
+  background-color: #4cae4c;
+}
+
+/* Anasayfa için genel stiller */
+header {
+  background-color: rgba(255, 255, 255, 0.5); /* Yarı saydam siyah arka plan */
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+/* Navigation (menü) stili */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Bağlantı üzerine gelindiğinde altı çizili olacak */
+}
+
+/* Main içerik stili */
+main {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+
+
+
+/* Footer (alt bilgi) stili */
+
+
+/* Gelişmiş stil - İçerik kutularını ortalamak için */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Saydam beyaz arka plan */
+  border-radius: 10px;
+}
+
+/* Buton stilini geliştirmek için */
+button {
+  background-color: #ff6f61;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff3e3d;
+}
+/* Ürün Kaydırıcı */
+.product-slider {
+  display: flex;
+  overflow-x: auto; /* Yatay kaydırma özelliğini aktif eder */
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Arka planı şeffaf yap */
+  gap: 20px; /* Ürünler arasındaki boşluğu ayarlayın */
+  position: fixed; /* Sayfada sabit kalacak şekilde ayarlıyoruz */
+  bottom: 0; /* Sayfanın en altına yerleşecek şekilde */
+  left: 0;
+  right: 0;
+  z-index: 10; /* Footer'ın üstünde kalmasını sağlamak için */
+  margin-bottom: 0; /* Alt boşluğu sıfırlıyoruz */
+  padding-bottom: 20px; /* Kaydırıcıyı footer ile hizalamak için padding ekledik */
+}
+
+/* Ürün kutularına şeffaflık eklemek */
+.product {
+  flex: 0 0 auto; /* Her bir ürün için sabit genişlik */
+  width: 200px; /* Ürün kutularının genişliğini ayarla */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7); /* Ürün kutusunun şeffaf olması */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* Header (üst menü) stili */
+header {
+  background-color: rgba(0, 0, 0, 0.5); /* Yarı saydam siyah arka plan */
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Header'ı normal akışta tutar */
+  z-index: 5; /* Header'ın kaydırıcıdan altta olmasını sağlamak için */
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+/* Navigation (menü) stili */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Bağlantı üzerine gelindiğinde altı çizili olacak */
+}
+
+/* Main içerik stili */
+main {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 2em;
+  margin-top: 0;
+}
+
+/* Footer (alt bilgi) stili */
+
+    
+    
+.product img {
+  width: 100%; /* Görselin bulunduğu konteynerin genişliğine uyar */
+  height: auto; /* Yüksekliği oranlı olarak ayarlar */
+}
+/* Ürün kaydırıcı içindeki ürün yazılarının stilini iyileştirme */
+.product-name, .product-price {
+  font-family: 'Arial', sans-serif;  /* Daha okunabilir bir font */
+  font-weight: bold;  /* Yazı kalınlığı */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);  /* Yazıya gölge ekleme */
+  color: #ff6f61;  /* Ürün adı için renk */
+  margin-top: 10px;
+  font-size: 1.2em;  /* Boyutu büyütme */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;  /* Animasyon ekliyoruz */
+}
+
+/* Ürün fiyatı için farklı renk ve stil */
+.product-price {
+  color: #28a745;  /* Fiyat için yeşil renk */
+  font-size: 1.1em;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;  /* Animasyon ekliyoruz */
+}
+
+/* Hover durumunda (mouse üzerine gelince) ürün adının ve fiyatının animasyonu */
+.product:hover .product-name, .product:hover .product-price {
+  transform: scale(1.1);  /* Hover sırasında biraz büyüme efekti */
+  color: #ffcc00;  /* Hover sırasında sarı renge dönsün */
+}
+
+/* Animasyon ekleyelim - Her ürün yüklenirken renk değişimi */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);  /* Başlangıçta biraz aşağıda */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);  /* Normal konumuna gelmesi */
+  }
+}
+
+/* Ürünlere animasyon uygulama */
+.product {
+  animation: fadeIn 0.5s ease-in-out;  /* Fade-in animasyonu */
+  animation-delay: 0.3s;  /* Animasyon biraz gecikmeli başlasın */
+}
+
+/* Ürünler arasındaki boşlukları daha belirgin yapalım */
+.product-slider {
+  gap: 30px;  /* Ürünler arasındaki boşluğu artırdık */
+}
+
+/* product1.css */
+
+/* Ürün 1 sayfası için özel arka plan */
+body {
+  background-image: url('dark.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header stilini ayarlıyoruz */
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Yarı saydam siyah arka plan */
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #ff6f61;
+}
+
+/* Ürün detayları için stil */
+.product-details {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  width: 60%;
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-out; /* Animasyon ekliyoruz */
+}
+
+.product-details img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-out; /* Görsel için animasyon */
+}
+
+.product-details h2 {
+  font-size: 2.5em;
+  color: #ff6f61;
+  margin: 0;
+  text-align: center;
+  animation: textAnimation 2s ease-out; /* Başlık için animasyon */
+}
+
+.product-description {
+  font-size: 1.2em;
+  color: #ddd;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.product-price {
+  font-size: 1.5em;
+  color: #5cb85c;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+button {
+  background-color: #ff6f61;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff3e3d;
+}
+
+/* Footer stilini ayarlıyoruz */
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
